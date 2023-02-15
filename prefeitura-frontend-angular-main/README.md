@@ -9,7 +9,7 @@ Grupo G:
 
 ## Intro
 
-Esse projeto faz parte da 3a entrega para o curso de MBA FIAP, trata-se de um protótipo de front-end em ANGULAR 8.
+Esse projeto faz parte da 4a entrega para o curso de MBA FIAP, trata-se de um protótipo de front-end em ANGULAR 8.
 para simular um portal da prefeitura do Recife, mais clean, direto ao ponto, levando em consideracão as necessidades do usuários.
 Foi baseado na última entrega que fizemos em ReactJS, convertido para angular.
 Será conectado a um back-end em Node.JS usando Express. Aqui faremos um CRUD para imóveis dos usuários.
