@@ -1,0 +1,32 @@
+@import "../../../styles.scss";
+
+.select-container{
+  width: 100%;
+  padding: 2px 20px;
+
+  select{
+    width: 100%;
+    height: 35px;
+    border: $border 1px solid;
+    border-radius: 8px;
+    padding: 5px;
+  }
+
+  label{
+    margin-left: 5px;
+    font-weight: bold;
+    color: $dark-font;
+    font-size: 14px;
+
+  }
+
+  .errorMessage{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    color: $cancel;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+}

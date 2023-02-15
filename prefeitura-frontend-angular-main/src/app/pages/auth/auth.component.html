@@ -1,0 +1,21 @@
+<div class="auth-container">
+
+ <div class="template-container">
+  <h2>{{authTitle}}</h2>
+
+  <div class="form-container">
+    <app-login style="width:100%;" *ngIf="renderer==='login'; else signup "></app-login>
+    <ng-template #signup>
+      <app-signup (changeRenderer)="onToogleTemplateClick('signup')" style="width:100%;" ></app-signup>
+    </ng-template>
+  </div>
+  <div class="message-container">
+    <p>{{message}}</p>
+    <app-button [text]="buttonText" [icon]='buttonTemplateIcon' (onClick)="onToogleTemplateClick(renderer)" [background]="buttonTemplateBackground"></app-button>
+    <div class="home-button-container">
+      <div>ou vá para página inicial</div>
+      <app-button [icon]="homeIcon" (onClick)="onHomeClick()" [background]="buttonHomeBackground"></app-button>
+    </div>
+  </div>
+ </div>
+</div>

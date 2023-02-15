@@ -1,0 +1,64 @@
+@import "../../../styles.scss";
+
+.auth-container{
+  background-color: $primary;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .template-container{
+    background-color: $light-background;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px 0;
+
+    h2 {
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+      color: $primary;
+      font-size: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-container {
+      margin-top: 10px;
+      min-height: 300px;
+      display: flex;
+      justify-content: center;
+      height: 70%;
+    }
+
+    .message-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0 20px 0;
+
+      p {
+        font-size: 20px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        font-weight: bold;
+
+        @media (max-width: 768px) {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+
+      .home-button-container {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+
+  }
+}

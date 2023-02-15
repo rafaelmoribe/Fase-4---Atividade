@@ -1,0 +1,30 @@
+<div class="buildings-list">
+  <app-button
+    [background]="addBackground"
+    [icon]="addIcon"
+    [text]="addText"
+    (click)="addBuilding()"
+  />
+  <div class="list" *ngIf="buildings.length; else noBuildings" >
+
+    <div class="building-row" *ngFor="let building of buildings">
+      <p>Matricula: <span>{{building.matricula}}</span></p>
+      <p>Área: <span>{{building.tamanho}}m²</span></p>
+      <p>Bairro: <span>{{building.bairro}}</span></p>
+      <p>Endereço: <span>{{building.endereco}}</span></p>
+      <div class="iptu">IPTU:<span>{{building.iptu}}</span> <app-button (click)="viewBillet(building)"  [icon]="viewIcon" [background]="viewBackground" [text]="viewText"></app-button></div>
+      <div class="buttons">
+        <app-button [buttonCircle]="buttonCircle" [background]="updateBackground" [icon]="updateIcon" (click)="updateBuilding(building)"></app-button>
+        <app-button [buttonCircle]="buttonCircle" [background]="deleteBackground" [icon]="deleteIcon" (click)="deleteBuilding(building.matricula)"></app-button>
+      </div>
+
+    </div>
+
+  </div>
+  <ng-template  #noBuildings>
+    <div class="no-buildings">
+      Não existem Imóveis cadastrados
+    </div>
+  </ng-template>
+
+</div>

@@ -1,0 +1,39 @@
+services:
+   front_prefeitura:
+      build: ./prefeitura-frontend-angular-main
+      container_name: prefeitura-frontend-angular-main
+      hostname: prefeitura-frontend-angular-main
+      networks:
+         - prefeitura_net
+      ports:
+         - 4200:4200
+
+   back_cidadao:
+      build: ./prefeitura-backend-cidadaos
+      container_name: prefeitura-backend-cidadaos
+      hostname: prefeitura-backend-cidadaos
+      networks:
+         - prefeitura_net
+      ports:
+         - 3000:3000
+
+   back_imovel:
+      build: ./prefeitura-backend-imoveis
+      container_name: prefeitura-backend-imoveis
+      hostname: prefeitura-backend-imoveis
+      networks:
+         - prefeitura_net
+      ports:
+         - 3001:3001
+
+   db_prefeitura:
+      container_name: mongo_db_prefeitura
+      hostname: mongo_db_prefeitura
+      image: mongo:jammy
+      networks:
+         - prefeitura_net
+      ports: 
+         - 27017:27017
+
+networks:
+   prefeitura_net:

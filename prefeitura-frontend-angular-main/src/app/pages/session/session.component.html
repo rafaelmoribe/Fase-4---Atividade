@@ -1,0 +1,30 @@
+<div class="session-page">
+  <div class="session-header">
+    <p class="session-status">
+      <b>Sessão:</b> Ativa
+    </p>
+    <p class="session-user">
+      <b>Bem vindo:</b> {{user.name}}
+    </p>
+    <p>{{today}}</p>
+    <h2>Página do cidadão</h2>
+    <app-button class="session-logout" (click)="onLogoutClick()" [text]="logoutText" [icon]="logoutIcon" [background]="logoutBackground"></app-button>
+  </div>
+  <div class="session-renderer" *ngIf="user.persona === 1; else news">
+   <app-taxes></app-taxes>
+   <app-news></app-news>
+   <app-regulation></app-regulation>
+  </div>
+  <ng-template #news >
+    <ng-container *ngIf="user.persona === 2; else regulation">
+      <app-news></app-news>
+      <app-regulation></app-regulation>
+      <app-taxes></app-taxes>
+    </ng-container>
+  </ng-template>
+  <ng-template #regulation >
+    <app-regulation></app-regulation>
+    <app-taxes></app-taxes>
+    <app-news></app-news>
+  </ng-template>
+</div>

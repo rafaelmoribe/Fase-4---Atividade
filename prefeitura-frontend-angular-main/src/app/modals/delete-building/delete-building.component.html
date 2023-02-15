@@ -1,0 +1,11 @@
+<div  class="remove-building-dialog">
+  <h1 mat-dialog-title class="dialog-title">{{title}}</h1>
+  <div class="dialog-content" mat-dialog-content>
+    <p class="message">Tem certeza que quer apagar o imóvel de matrícula: <span>{{matricula}}</span>?</p>
+    <p class="warn">Essa ação é irreversível!</p>
+  </div>
+  <div class="dialog-buttons" mat-dialog-actions>
+    <app-button mat-button [background]="cancelBackground" [icon]="cancelIcon" [text]="cancelText" (click)="cancel()"></app-button>
+    <app-button mat-button [background]="submitBackground"  [icon]="submitIcon" [text]="submitText" (click)="onDelete()"></app-button>
+  </div>
+</div>

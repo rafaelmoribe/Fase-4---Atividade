@@ -1,0 +1,10 @@
+<div class="signup-container">
+  <app-input (keypress)="cleanCPFError()" (change)='onUsernameChange($event)' [errorMessage]="cpfError" [label]="cpf" style="width: 100%" [placeholder]="cpfPlaceholder"></app-input>
+  <app-input (keypress)="cleanNameError()"  (change)="onNameChange($event)" [errorMessage]="nameError" [label]="name" style="width: 100%" [placeholder]="namePlaceholder"></app-input>
+  <app-input (keypress)="cleanPasswordError()"  (change)="onPasswordChange($event)" [errorMessage]="passwordError" [label]="password" [inputType]="inputPassword" style="width: 100%" [placeholder]="passwordPlaceholder"></app-input>
+  <app-input (keypress)="cleanConfirmPasswordError()"  (change)="onConfirmPasswordChange($event)" [errorMessage]="confirmPasswordError" [label]="confirmPassword" [inputType]="inputConfirmPassword" style="width: 100%" [placeholder]="confirmPasswordPlaceholder"></app-input>
+  <app-input (keypress)="cleanTelefoneError()"  (change)="onTelefoneChange($event)" [errorMessage]="telefoneError" [label]="telefone" style="width: 100%" [placeholder]="telefonePlaceholder"></app-input>
+  <app-input (keypress)="cleanEmailError()"  (change)="onEmailChange($event)" [errorMessage]="emailError" [label]="email" style="width: 100%" [placeholder]="emailPlaceholder"></app-input>
+  <app-select (change)="onPersonaChange($event)" [options]="personaOptions" [label]="persona" [errorMessage]="personaError" style="width: 100%;"></app-select>
+  <app-button (click)="handleSubmit()" [text]="submitText" [icon]="submitIcon" [background]="submitColor" ></app-button>
+</div>

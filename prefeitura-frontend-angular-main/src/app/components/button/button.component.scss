@@ -1,0 +1,21 @@
+@import "../../../styles.scss";
+
+
+button{
+  color: $light-font;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+
+ &:hover{
+    opacity: 80%;
+  }
+}
+

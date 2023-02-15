@@ -1,0 +1,69 @@
+<div class="billet">
+  <div class="buttons-billet">
+    <app-button
+      (click)="handleBack()"
+      [background]="backBackground"
+      [text]="backText"
+      [icon]="backIcon"
+    ></app-button>
+    <app-button
+      (click)="handlePrint()"
+      [background]="printBackground"
+      [text]="printText"
+      [icon]="printIcon"
+    ></app-button>
+  </div>
+
+  <div class="billet-print">
+    <div class="billet-header">
+      <h1>Prefeitura da Cidade do Recife</h1>
+      <div class="billet-header-info">
+        <h2>Imprimir IPTU - {{today}}</h2>
+        <img src="../../../assets/images/logo-prefeitura.png" alt="logo" />
+      </div>
+    </div>
+
+    <div class="firstline">
+      <div class="cell">
+        <b>Matricula: </b>
+        {{building.matricula}}
+      </div>
+      <div class="cell">
+        <b>Endereço: </b>
+        {{building.endereco}}
+      </div>
+    </div>
+    <div class="secondline">
+      <div class="cell">
+        <b>Bairro: </b>
+        {{building.bairro}}
+      </div>
+      <div class="cell">
+        <b>Tamanho: </b>
+        {{building.tamanho}}m²
+      </div>
+      <div class="cell">
+        <b>VALOR: </b>
+        {{building.iptu}}
+      </div>
+    </div>
+    <div class="thirdline">
+      <div class="cell">
+        <b>Contribuinte: </b>
+        {{user.name}}
+      </div>
+      <div class="cell">
+        <b>CPF: </b>
+        {{user.username}}
+      </div>
+    </div>
+    <div class="fourthline">
+      <div class="cell">
+        <p>Pague por qualquer banco: </p>
+        <!-- MOCKED FOR FUTURE DEVLOPMENT -->
+        <img style="width: 50%;" src="../../../assets/images/barcode.png" alt="bar-code"/>
+      </div>
+    </div>
+  </div>
+</div>
+

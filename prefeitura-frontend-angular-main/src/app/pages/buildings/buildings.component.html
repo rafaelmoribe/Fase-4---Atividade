@@ -1,0 +1,11 @@
+<div class="buildings">
+  <div class="buildings-container">
+    <app-button class="logout-buildings" (click)="onLogoutClick()" [text]="logoutText" [icon]="logoutIcon" [background]="logoutBackground"></app-button>
+    <h2>Imóveis e Impostos</h2>
+
+    <app-buildings-list style="width:100%;" [buildings]="buildings"></app-buildings-list>
+
+    <app-button (click)="onBackClick()" [text]="backText" [icon]="backIcon" [background]="backBackground"></app-button>
+
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div  class="add-building-dialog">
+  <h1 mat-dialog-title class="dialog-title">{{title}}</h1>
+  <div class="dialog-content" mat-dialog-content>
+    <app-input (keyup)="keyupArea()" [errorMessage]="areaError" (change)="onAreaChange($event)" value={{areaValue}} [inputType]="areaType" [label]="areaLabel" [placeholder]="areaPlaceholder"></app-input>
+    <app-input (keyup)="keyupAddress()" [errorMessage]="addressError"  (change)="onAddressChange($event)" value={{addressValue}}  [label]="addressLabel" [placeholder]="addressPlaceholder"></app-input>
+    <app-select (change)="onNeighborhoodChange($event)"  [init]="neighborhoodValue"  [label]="neighborhoodLabel" [options]="neighborhoodOptions"></app-select>
+  </div>
+  <div class="dialog-buttons" mat-dialog-actions>
+    <app-button mat-button [background]="cancelBackground" [icon]="cancelIcon" [text]="cancelText" (click)="cancel()"></app-button>
+    <app-button mat-button [background]="submitBackground"  [icon]="submitIcon" [text]="submitText" (click)="submit()"></app-button>
+  </div>
+</div>

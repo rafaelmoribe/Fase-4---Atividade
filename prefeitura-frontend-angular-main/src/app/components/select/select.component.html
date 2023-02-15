@@ -1,0 +1,7 @@
+<div class="select-container">
+  <label *ngIf="label" for={{selectId}}>{{label}}</label>
+  <select id={{selectId}} value={{startValue}}>
+    <option *ngFor="let option of options" value={{option.value}}>{{option.text}}</option>
+  </select>
+  <div class="errorMessage">{{errorMessage}}</div>
+</div>

@@ -1,0 +1,40 @@
+@import "../../../styles.scss";
+
+.not-found{
+  background-image: url('../../../assets/images/recife_centro.jpeg');
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $light-font;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+
+  .transparent-message {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: $transparent-dark;
+    height: fit-content;
+    padding: 30px;
+    border: 1px solid $border;
+    border-radius: 8px;
+    text-align: justify;
+    line-height: 1.5;
+
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: $secondary;
+    }
+
+    .home-button {
+      margin: 0 auto;
+    }
+  }
+}

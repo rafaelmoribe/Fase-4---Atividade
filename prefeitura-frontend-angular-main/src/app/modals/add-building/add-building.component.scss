@@ -1,0 +1,25 @@
+@import "../../../styles.scss";
+
+
+.add-building-dialog{
+  width: 100%;
+  padding: 20px;
+  min-height: 300px;
+
+  .dialog-title{
+    font-size: 20px; font-weight: bold; color: $primary;
+    margin-bottom: 30px;
+  }
+
+  .dialog-content{
+    width: 100%;
+    min-height: 300px;
+    padding: 0
+  }
+
+  .dialog-buttons{
+    width: 100%; display: flex; gap: 20px; justify-content: flex-end;
+  }
+
+}
+

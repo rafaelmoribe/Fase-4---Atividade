@@ -1,0 +1,64 @@
+@import "../../../../../styles.scss";
+
+.buildings-list{
+  width: 100%;
+  min-height: 200px;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+
+  .list{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow-y: auto;
+    width: 100%;
+    gap: 20px;
+    max-height: 50%;
+
+    .building-row{
+      border: 1px solid $border;
+      font-weight: bold;
+      width: 90%;
+      padding:20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      position: relative;
+
+      span{
+        font-weight: lighter;
+      }
+
+      .iptu{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        @media (max-width: 768px){
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+
+      .buttons{
+        position: absolute;
+        display: flex;
+        gap: 10px;
+        top: 50%;
+        right: 0;
+        margin-right: 30px;
+      }
+    }
+
+  }
+  .no-buildings{
+    border: 1px solid $border;
+    padding: 10px;
+    color: $cancel;
+    font-size: 30px;
+  }
+}

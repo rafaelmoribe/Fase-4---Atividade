@@ -1,0 +1,44 @@
+@import "../../../../../styles.scss";
+
+.regulation-section{
+  padding: 0 20px 30px 20px;
+  margin-top: 30px;
+  border-bottom: 1px solid $border;
+
+  h2 {
+    margin-bottom: 30px;
+    color: $primary;
+    font-size: 30px;
+  }
+
+  .regulations-link {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    ul {
+      li {
+        margin-top: 15px;
+      }
+    }
+    figure {
+      width: 536px;
+      @media (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      img {
+        width: 100%;
+        @media (max-width: 768px) {
+          width: 100%;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+}

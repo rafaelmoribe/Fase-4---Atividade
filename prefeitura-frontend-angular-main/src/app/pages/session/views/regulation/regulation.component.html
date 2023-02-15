@@ -1,0 +1,21 @@
+<section class="regulation-section">
+  <h2>Regulamentação</h2>
+  <div class="regulations-link">
+    <ul>
+      <li *ngFor="let item of links">
+        <a href={{item.link}} target="_blank" rel="noreferrer">
+          {{item.title}}
+        </a>
+      </li>
+    </ul>
+    <a
+      href="https://licenciamentounificado.recife.pe.gov.br/"
+      target="_blank"
+        rel="noreferrer"
+    >
+      <figure>
+        <img src="../../../../../assets/images/licencas.png" alt="imagem" />
+      </figure>
+    </a>
+  </div>
+</section>
