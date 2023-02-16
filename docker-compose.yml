@@ -1,6 +1,7 @@
 services:
    front_prefeitura:
       build: ./prefeitura-frontend-angular-main
+      image: rafaelmoribe/prefeitura-frontend-angular-main
       container_name: prefeitura-frontend-angular-main
       hostname: prefeitura-frontend-angular-main
       networks:
@@ -10,6 +11,7 @@ services:
 
    back_cidadao:
       build: ./prefeitura-backend-cidadaos
+      image: rafaelmoribe/prefeitura-backend-cidadaos
       container_name: prefeitura-backend-cidadaos
       hostname: prefeitura-backend-cidadaos
       networks:
@@ -19,6 +21,7 @@ services:
 
    back_imovel:
       build: ./prefeitura-backend-imoveis
+      image: rafaelmoribe/prefeitura-backend-imoveis
       container_name: prefeitura-backend-imoveis
       hostname: prefeitura-backend-imoveis
       networks:
